@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+django = "*"
+
+[packages]
+django = "*"
+tree = "*"
+django-imagekit = "*"
+pillo = "*"
+pillow = "*"
+pymysql = "*"
+pollo = "*"
+
+[requires]
+python_version = "3.6"
