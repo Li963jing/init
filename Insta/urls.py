@@ -24,5 +24,5 @@ urlpatterns = [
     path('make_post/',views.PostCreateView.as_view(),name="make_post"),
     path('update_post/<int:pk>/',views.PostUpdateView.as_view(),name="update_post"),
     path('delete_post/<int:pk>/',views.PostDeleteView.as_view(),name="delete_post"),
-    path('auth/',include('django.contrib.auth.urls')),
+    
 ]

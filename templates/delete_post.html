@@ -1,11 +1,13 @@
-<h1> Delete Post</h1>
-<form action="" method="post" enctype="multipart/form-data">
-    {% comment %} 
-        enctype:保存的时候必须使用的，如果只是字符串类类型的数据可以不用添加该属性，
-        如果有图片等非纯字符串的数据必须添加该属性
-    {% endcomment %}
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Delete Post </h1>
+
+<form action="" method="post">
     {% csrf_token %}
-    <p>Are you sure you want to delete {{object.title}}? </p> 
-    {% comment %} 删除的时候显示的内容 {% endcomment %}
-    <button type='submit'>Delete Post</button>
+    <p> Are you sure you want to delete {{object.title}}</p>
+    <button type="submit"> Confirm delete </button>
 </form>
+
+{% endblock content %}

@@ -17,12 +17,12 @@ from Insta.forms import *
 
 
 # Create your views here.
-class HelloDjango(TemplateView):
-    template_name = 'home.html'
+# class HelloDjango(TemplateView):
+#     template_name = 'home.html'
     
 class PostView(LoginRequiredMixin,ListView):
     model  = Post
-    template_name = 'posts.html'
+    template_name = 'index.html'
     login_url = 'login'
 
 class PostDetail(DetailView):
