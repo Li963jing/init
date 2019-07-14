@@ -1,8 +1,36 @@
 <div>
+    <ul>
+        {% if request.user.is_authenticater %}
+        <li>
+            <a href='{% url "home" %}'> Login </a>
+        </li>
+        {% else %}
+        <li>
+            <a href='{% url "login" %}'> Logout </a>
+        </li>
+        
+        <li>
+            <a href='{% url "signup" %}'> Sign Up </a>
+        </li>
+        {% endif %}
+    </ul>
+</div>
+
+
+
+
+
+<div>
+    <a href="{% url 'make_post' %}"> Make Post</a>
+</div>
+
+
+
+<div>
     {% for post in object_list %}
         <p>{{post.title}}</p >
         <a href='{% url "post_detail" post.pk %}'>
-            <img src='{{ post.image }}'>
+            <img src='{{ post.image }}' width=200 height=200>
         </a>
     {% endfor %}
 </div>

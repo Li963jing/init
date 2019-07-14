@@ -120,4 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]    # 静态文件的默认访问路径
+LOGIN_REDIRECT_URL = 'home'   # post之后重定向的路径
+LOGOUT_REDIRECT_URL = 'home' 
+AUTH_USER_MODEL = 'Insta.InstaUser'

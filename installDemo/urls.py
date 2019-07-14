@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from Insta.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('Insta.urls'))
+    path('',include('Insta.urls')),
+    path('auth/',include('django.contrib.auth.urls')),  
+    #  必须在templates下创建一个叫registration的文件夹，然后在下面新建一个login.html用于登录  
+    path('auth/signup/',SignUpView.as_view(),name="signup"),
 ]

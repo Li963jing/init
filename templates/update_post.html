@@ -1,0 +1,11 @@
+<h1> Update Post</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    {% comment %} 
+        enctype:保存的时候必须使用的，如果只是字符串类类型的数据可以不用添加该属性，
+        如果有图片等非纯字符串的数据必须添加该属性
+    {% endcomment %}
+    {% csrf_token %}
+    {{form.as_p}}
+    {% comment %} <img src='http://{{ request.META.HTTP_HOST }}/{{object.image}}'> {% endcomment %}
+    <button type="submit"> Update </button>
+</form>
